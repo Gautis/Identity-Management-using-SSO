@@ -1,0 +1,87 @@
+extends layout
+
+block content
+  style.
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      background-image: url('C:\Users\gauta\Desktop\cc_projectt\passport-saml-example-master\public\bgimg.jpg');
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    dt, dd {
+      width: 100%;
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    dt {
+      background-color: #eee;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    dd {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    a {
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px solid black;
+        border: 2px solid black;
+      background-color: #eee;
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #ddd;
+    }
+
+  .container
+    h1 Profile
+    dl
+      dt Display name
+      dd #{user.displayName}
+      dt Email
+      dd #{user.email}
+      dt First Name
+      dd #{user.firstName}
+    a(href="/logout") Logout
